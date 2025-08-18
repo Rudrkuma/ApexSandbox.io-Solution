@@ -1,6 +1,6 @@
 public Integer rockPaperScissors(String player1, String player2) {
     //code here
-    Map<String> winMap = new Map{
+    Map<String, String> winMap = new Map<String, String>{
         'rock' => 'scissors',
         'scissors' => 'paper',
         'paper' => 'rock'
