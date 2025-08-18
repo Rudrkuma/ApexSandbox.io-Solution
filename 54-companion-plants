@@ -7,5 +7,5 @@ public Boolean companionPlants(String plant1, String plant2) {
         new Set<String>{'onions','tomatoes'}
     };
 
-    return companions.contains(new Set{plant1, plant2});
+    return companions.contains(new Set<String>{plant1, plant2});
 }
