@@ -1,0 +1,12 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    //code here
+    Map<String> winMap = new Map{
+        'rock' => 'scissors',
+        'scissors' => 'paper',
+        'paper' => 'rock'
+    }
+
+    if(player1 == player2) return 0;
+
+    return winMap.get(player1) == player2 ? 2:1;
+}
