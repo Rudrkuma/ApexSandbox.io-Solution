@@ -1,8 +1,8 @@
 public String aOrAn(String word) {
     //code here
-    List<String> vowels = new List<String>{'a','e','i','o','u'};
-    List<String> wordList = word.split('');
-    if(vowels.contains(wordList[0])){
+    String vowels = 'aeiou';
+    String firstChar = word.substring(0,1).toLowerCase();
+    if(vowels.contains(firstChar)){
         return 'an '+word;
     }else{
         return 'a '+word;
