@@ -11,7 +11,7 @@ public String changeTimeFormat(String strTime) {
     }else if(hour>12){
         hour -= 12;
     }
-    String formatHour = hour <10 ? '0':''+ String.valueOf(hour);
+    String formatHour = (hour < 10) ? '0' + String.valueOf(hour) : String.valueOf(hour);
 
     return formatHour+':'+min+' '+period;
 
