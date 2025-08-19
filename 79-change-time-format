@@ -2,7 +2,7 @@ public String changeTimeFormat(String strTime) {
     //code here
     List<String> str = strTime.split(':');
     Integer hour = Integer.valueOf(str[0]);
-    String min = str[2];
+    String min = str[1];
 
     String period = hour>=12 ? 'PM':'AM';
 
