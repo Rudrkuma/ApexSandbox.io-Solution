@@ -1,17 +1,18 @@
 public String changeTimeFormat(String strTime) {
     //code here
-    String min =strTime.substringAfter(':');
-    Integer tim = Integer.valueOf(strTime.substringBefore(':'));
-    if(tim >0 && tim <12){
-        return strTime+' AM';
-    }else if(tim==12){
-        return strTime+' PM';
-    }else if(tim==0){
-        tim += 12;
-        return String.valueOf(tim)+':'+min+' AM';
-    }else if(tim<24){
-        tim -= 12;
-        return String.valueOf(tim)+':'+min+' PM';
+    List<String> str = strTime.split(':');
+    Integer hour = Integer.valueOf(str[0]);
+    String min = str[2];
+
+    String period = hour>=12 ? 'PM':'AM';
+
+    if(hour == 0){
+        hour = 12;
+    }else if(hour>12){
+        hour -= 12;
     }
-    return 'Invalid time';
+    String formatHour = hour <10 ? '0':''+ String.valueOf(hour);
+
+    return formatHour+':'+min+' '+period;
+
 }
