@@ -1,0 +1,17 @@
+public String changeTimeFormat(String strTime) {
+    //code here
+    String min =strTime.substringAfter(':');
+    Integer time = Integer.valueOf(strTime.substringBefore(':'));
+    if(time >0 && time <12){
+        return strTime+' AM';
+    }else if(time==12){
+        return strTime+' PM';
+    }else if(time==0){
+        time += 12;
+        return String.valueOf(time)+':'+min+' AM';
+    }else if(time<24){
+        time -= 12;
+        return String.valueOf(time)+':'+min+' PM';
+    }
+    return 'Invalid time';
+}
