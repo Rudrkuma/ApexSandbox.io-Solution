@@ -1,0 +1,9 @@
+public String reverseWordsInASentence(String sentence){
+    //your flawless code here
+    List<String> sen = sentence.split(' ');
+    String o='';
+    for(String s: sen){
+        o = o+s+' ';
+    }
+    return o;
+}
