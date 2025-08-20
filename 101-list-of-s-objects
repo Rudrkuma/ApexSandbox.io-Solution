@@ -1,0 +1,15 @@
+public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> contacts)
+{
+    // code here
+    List<sObject> result = new List<sObject>();
+    if(accounts.size()==0 && contacts.size()==0){
+        return result;
+    }
+    for(Account acc: accounts){
+        result.add(acc);
+    }
+    for(Contact con: contacts){
+        result.add(con);
+    }
+    return result;
+}
