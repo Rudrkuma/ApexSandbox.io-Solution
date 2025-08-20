@@ -3,7 +3,8 @@ public List<String> getFieldsValue(Account acc, List<String> fields)
     // code here
     List<String> result = new List<String>();
     for(String s: fields){
-        result.add(acc[s]);
+        String f = (String)acc.get(s);
+        result.add(f);
     }
     return result;
 }
