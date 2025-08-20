@@ -1,0 +1,16 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    // code here 
+    if(accounts == null){
+        throw IllegalArgumentException;
+    }
+    for(Account acc: accounts){
+        if(acc.BillingCity == null){
+            throw AccountException;
+        }
+    }
+    return accounts;
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
