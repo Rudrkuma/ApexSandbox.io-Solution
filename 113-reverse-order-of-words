@@ -1,16 +1,14 @@
 public String reverseWordsInASentence(String sentence){
     //your flawless code here
-    if(sentence == null){
-        return null;
+    if (String.isBlank(sentence)) {
+        return sentence;
     }
     List<String> sen = sentence.split(' ');
-    String o='';
-    for(integer i=sen.size()-1; i>0; i--){
-        
-        o = o+sen[i]+' ';
-    }
-    o = o + sen[0];
-    return o;
+    List<String> words= new List<String>();
 
+    for(integer i=sen.size()-1; i>=0; i--){        
+        words.add(sen[i]);
+    }
+    return String.join(words,' ');
    
 }
