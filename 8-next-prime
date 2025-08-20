@@ -5,6 +5,7 @@ public Integer nextPrime(Integer num) {
        if(isPrime(num)){
            break;
        }
+       num++;
    }
     return num;   
 }
