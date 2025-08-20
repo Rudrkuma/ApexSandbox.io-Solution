@@ -5,7 +5,7 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     if(accounts == null && contacts == null){
         return result;
     }
-    if(accounts.size>0){
+    if(accounts.size()>0){
         for(Account acc: accounts){
         result.add(acc);
         }
