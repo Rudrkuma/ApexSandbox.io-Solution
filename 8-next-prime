@@ -3,17 +3,15 @@ public Integer nextPrime(Integer num) {
     if(num<0){
         return 2;
     }
-    num++;
-   while(num>1){
-       if(isPrime(num)){
-           break;
-       }
-       num++;
+    Integer can = num+1;
+   while(!isPrime(can)){       
+       can++;
    }
-    return num;   
+    return can;   
 }
 public boolean isPrime(Integer num){
-    for(Integer i =2; i<=num/2; i++){
+    Integer sqrt = Math.floor(Math.sqrt(num));
+    for(Integer i =2; i<=sqrt; i++){
         if(Math.mod(num,i) ==0){
             return false;
         }
