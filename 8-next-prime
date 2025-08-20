@@ -9,7 +9,7 @@ public Integer nextPrime(Integer num) {
     return num;   
 }
 public boolean isPrime(Integer num){
-    for(Integer i =2; i<num/2; i++){
+    for(Integer i =2; i<=num/2; i++){
         if(Math.mod(num,i) ==0){
             return false;
         }
